@@ -1,0 +1,42 @@
+version: "3.1"
+
+intents:
+  - choose_subject
+  - give_answer
+
+slots:
+  subject:
+    type: text
+    mappings:
+      - type: custom
+        action: action_generate_question
+  question:
+    type: text
+    mappings:
+      - type: custom
+        action: action_generate_question
+  question_number:
+    type: text
+    mappings:
+      - type: custom
+        action: action_generate_question
+  expected_answer:
+    type: text
+    mappings:
+      - type: custom
+        action: action_generate_question
+# forms:
+#   question_form:
+#     required_slots:
+#       - subject
+responses:
+  utter_set_subject_and_question_number:
+    - text: "Setting subject and question number: {subject}, {question_number}"
+
+actions:
+  - action_generate_question
+  - action_check_subjective_answer
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

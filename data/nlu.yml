@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+  - intent: choose_subject
+    examples: |
+      - start
+      - yeah
+      - go
+
+  - intent: give_answer
+    examples: |
+      - Java provides platform independence and has a rich ecosystem of libraries and frameworks.
+      - Java is popular because of its platform independence and its simplicity of use.
+      - Polymorphism is the ability of an object to take on many forms.
+      - An exception is an error that occurs during the execution of a program.
